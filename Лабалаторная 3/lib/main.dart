@@ -23,23 +23,23 @@ class IncrementScreen extends StatefulWidget {
 }
 
 class _IncrementScreenState extends State<IncrementScreen> {
-  int _counter = 0;
+  int _increment = 0;
 
   void _incrementCounter() {
     setState(() {
-      _counter++;
+      _increment++;
     });
   }
 
   void _decrementCounter() {
     setState(() {
-      _counter--;
+      _increment--;
     });
   }
 
   void _resetCounter() {
     setState(() {
-      _counter = 0;
+      _increment = 0;
     });
   }
 
@@ -58,7 +58,7 @@ class _IncrementScreenState extends State<IncrementScreen> {
               style: TextStyle(fontSize: 20),
             ),
             Text(
-              '$_counter',
+              '$_increment',
               style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 20),
