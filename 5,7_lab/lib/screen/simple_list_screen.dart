@@ -1,21 +1,38 @@
 import 'package:flutter/material.dart';
 
+// Класс экрана с простым списком
 class SimpleListScreen extends StatelessWidget {
-  const SimpleListScreen({super.key});
+  const SimpleListScreen({super.key}); // Конструктор с необязательным ключом
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Простой список'), backgroundColor: Color.fromARGB(255, 157, 28, 221),),
+      appBar: AppBar(
+        title: const Text('Простой список'), // Заголовок экрана
+        backgroundColor: Color.fromARGB(255, 157, 28, 221), // Фиолетовый цвет фона
+      ),
+      
+      // Основное содержимое экрана - статический ListView
       body: ListView(
-        children: const [
+        children: const [ // Список дочерних элементов
+          // Первый элемент списка
           ListTile(title: Text('Первая строка')),
-          Divider(thickness: 5,),
+          // Разделитель толщиной 5 пикселей
+          Divider(thickness: 5),
+          
+          // Второй элемент списка
           ListTile(title: Text('Вторая строка')),
-          Divider(thickness: 5,),
+          // Разделитель толщиной 5 пикселей
+          Divider(thickness: 5),
+          
+          // Третий элемент списка
           ListTile(title: Text('Третья строка')),
-          Divider(thickness: 5,),
+          // Разделитель толщиной 5 пикселей
+          Divider(thickness: 5),
+          
+          // Четвертый элемент списка
           ListTile(title: Text('Четвёртая строка')),
+          // Последний разделитель не добавляем, так как он не нужен после последнего элемента
         ],
       ),
     );
